@@ -15,7 +15,7 @@ public class connectToDatabase {
 		Connection connection = null;
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			connection=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=WebsiteBanHang;user=sa;password=123");
+			connection=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=shoppinghang;user=test;password=123");
 			System.out.println("Connect success");
 		} catch (SQLException | ClassNotFoundException e) {
 			System.out.println("Error when you connect to database!Error is: "+e.getMessage());
@@ -32,7 +32,7 @@ public class connectToDatabase {
 	}
 	public ResultSet selectData(String sql) throws Exception{
 		Connection connect =getConnect();
-		PreparedStatement stmt =   (PreparedStatement) connect.createStatement();
+		Statement stmt =    connect.createStatement();
 		ResultSet rs=	stmt.executeQuery(sql);
 		return rs;
 	}
