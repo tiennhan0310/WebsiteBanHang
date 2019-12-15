@@ -2,6 +2,9 @@
     <wb-module deploy-name="WebsiteBanHang">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/" source-path="/build"/>
+        <wb-resource deploy-path="/" source-path="/src/controller"/>
+        <wb-resource deploy-path="/" source-path="/WebContent/META-INF"/>
         <property name="context-root" value="WebsiteBanHang"/>
         <property name="java-output-path" value="/WebsiteBanHang/build/classes"/>
     </wb-module>
